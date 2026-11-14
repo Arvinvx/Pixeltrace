@@ -17,11 +17,20 @@ An image classifier that predicts whether a picture is AI-generated or real.
 ## Files
 
 ```text
-train.py                    train the model
-predict.py                  classify the sample images
-inspect_dataset.py          preview AI-generated dataset samples
-model/Ai_Or_Not.keras       saved trained Keras model
-samples/                    example images used by predict.py
+Pixeltrace/
+├── train.py
+├── predict.py
+├── inspect_dataset.py
+├── requirements.txt
+├── model/
+│   └── Ai_Or_Not.keras
+└── samples/
+    ├── ai_01.png
+    ├── ai_02.png
+    ├── ai_03.png
+    ├── real_01.jpg
+    ├── real_02.jpg
+    └── uncertain_01.png
 ```
 
 ```text
