@@ -4,6 +4,16 @@ An image classifier that predicts whether a picture is AI-generated or real.
 
 <!-- Project image goes here. -->
 
+## Files
+
+```text
+train.py              train the model
+predict.py            classify the sample images
+inspect_dataset.py    preview AI-generated dataset samples
+model/                saved Keras model
+samples/              example images
+```
+
 | Component | Details |
 | --- | --- |
 | Dataset | [Parveshiiii/AI-vs-Real](https://huggingface.co/datasets/Parveshiiii/AI-vs-Real) |
@@ -26,12 +36,40 @@ Dense (1, Sigmoid)
 AI-generated / Real
 ```
 
-## Run
+## Install
+
+Python 3.10–3.12 is recommended.
 
 ```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+## Run prediction
+
+```bash
 python predict.py
 ```
 
-Training is kept in `train.py`, and `inspect_dataset.py` previews AI-generated samples from the dataset.
+The script loads `model/Ai_Or_Not.keras` and prints the raw score plus `AI` or `REAL` for each image in `samples/`.
+
+## Train
+
+```bash
+python train.py
+```
+
+This downloads the dataset, creates the 75% / 12.5% / 12.5% split, trains the model, evaluates it, and saves the result to `model/Ai_Or_Not.keras`.
+
+## Inspect the dataset
+
+```bash
+python inspect_dataset.py
+```
+
+The dataset is downloaded from [Hugging Face](https://huggingface.co/datasets/Parveshiiii/AI-vs-Real).
 
