@@ -26,3 +26,12 @@ Dense (1, Sigmoid)
 AI-generated / Real
 ```
 
+## Run
+
+```bash
+pip install -r requirements.txt
+python predict.py
+```
+
+Training is kept in `train.py`, and `inspect_dataset.py` previews AI-generated samples from the dataset.
+
