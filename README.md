@@ -4,25 +4,25 @@ An image classifier that predicts whether a picture is AI-generated or real.
 
 <!-- Project image goes here. -->
 
+## Project details
+
+- **Dataset:** [Parveshiiii/AI-vs-Real](https://huggingface.co/datasets/Parveshiiii/AI-vs-Real)
+- **Dataset size:** 13,999 images
+- **Model:** VGG16 pretrained CNN
+- **Framework:** TensorFlow / Keras
+- **Task:** Binary image classification
+- **Labels:** `0` = AI-generated, `1` = Real
+- **Split:** 75% train, 12.5% validation, 12.5% test
+
 ## Files
 
 ```text
-train.py              train the model
-predict.py            classify the sample images
-inspect_dataset.py    preview AI-generated dataset samples
-model/                saved Keras model
-samples/              example images
+train.py                    train the model
+predict.py                  classify the sample images
+inspect_dataset.py          preview AI-generated dataset samples
+model/Ai_Or_Not.keras       saved trained Keras model
+samples/                    example images used by predict.py
 ```
-
-| Component | Details |
-| --- | --- |
-| Dataset | [Parveshiiii/AI-vs-Real](https://huggingface.co/datasets/Parveshiiii/AI-vs-Real) |
-| Dataset size | 13,999 images |
-| Model | VGG16 pretrained CNN |
-| Framework | TensorFlow / Keras |
-| Task | Binary image classification |
-| Labels | `0` = AI-generated, `1` = Real |
-| Split | 75% train, 12.5% validation, 12.5% test |
 
 ```text
 Input image
